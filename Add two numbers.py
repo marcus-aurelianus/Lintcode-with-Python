@@ -6,7 +6,7 @@ def Add(x,y):
         print(x,y)
     return x if x>>31 <=0 else x^~INT_RANGE
 #test case: 
-print(0xFFFFFFFF+2) #Failed....
+print(0xFFFFFFFF+2)
 print(Add(0xFFFFFFFF+1,0xFFFFFFFF+2)) #Failed....
 MAX_BIT = 2**32
 MAX_BIT_COMPLIMENT = -2**32
