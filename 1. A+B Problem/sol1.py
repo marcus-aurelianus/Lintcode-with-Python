@@ -15,7 +15,7 @@ def Add(x,y):
 #test case: 
 #print((0xFFFFFFFF+2)*2) 
 #print(Add(-32,33)) 
-#print(Add(0xFFFFFFFF+1,0xFFFFFFFF+2))
+print(Add(-0xFFFFFFFF+1,0xFFFFFFFF+2))
 print(Add(-100,-300))
 
 MAX_BIT = 2**32
