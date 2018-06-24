@@ -11,7 +11,7 @@ class Solution:
         return count
 
 
-Test Cases:
+#Test Cases:
     
 sol=Solution()
 print(sol.trailingZeros(1001171717))
