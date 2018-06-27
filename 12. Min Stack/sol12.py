@@ -4,7 +4,7 @@ class MinStack:
         self.mins=[]
     def push(self,number):
         self.stk.append(number)
-        if self.mins==[] or self.mins[-1]>number:
+        if self.mins==[] or self.mins[-1]>=number:
             self.mins.append(number)
     def pop(self):
         if self.stk[-1]==self.mins[-1]:

@@ -20,10 +20,9 @@ class Solution:
                     return dic1[str1]
         for i in range(n+1):
             count+=helper(str(i),k)
-            print(dic1)
         return count
 
 #Test Cases:
     
 sol=Solution()
-print(sol.digitCounts(1, 122))
+print(sol.digitCounts(2, 9))

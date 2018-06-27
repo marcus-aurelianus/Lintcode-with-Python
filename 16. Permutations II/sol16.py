@@ -18,8 +18,8 @@ class Solution:
                                 temp_m.append(mirrors[j]+[i,])
                                 temp.append(res[j]+[nums[i],])
                 res,temp,mirrors,temp_m=temp,[],temp_m,[]
-            return res,mirrors
+            return res
         return [[]]
 #Test Cases:  
 sol=Solution()
-print(sol.permute([1,2,2,3]))
+print(sol.permute([1,2,2]))

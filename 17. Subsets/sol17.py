@@ -1,6 +1,7 @@
 class Solution:
     def subsets(self,nums):#iterative
         result=[[]]
+        nums.sort()
         for num in nums:
             result.extend([ele+[num] for ele in result])
         return result
@@ -11,4 +12,4 @@ class Solution:
         return [[]]
 #Test Cases:  
 sol=Solution()
-print(sol.subsets1([1,2,3]))
+print(sol.subsets([4,1,0]))

@@ -3,9 +3,9 @@ class TreeNode:
         self.val=val
         self.left,self.right=None,None
 class Solution:
-    def srarchRange(self,root,k1,k2):
+    def searchRange(self,root,k1,k2):
         if root==None:
-            return ""
+            return []
         queue=[root]
         answer=[]
         while queue:
@@ -42,6 +42,6 @@ class Solution:
 #Test Cases:
     
 sol=Solution()
-tree=sol.deserialize("{20,8,22,4,12}")
-print(sol.srarchRange(tree,10,22))
+tree=sol.deserialize("{}")
+print(sol.searchRange(tree,10,22))
 

@@ -16,8 +16,12 @@ class Solution:
             return res
         d=n//10
         u=n%10
-        if n<10:
-            return 1
+        if k!=0:
+            if n<1:
+                return 0
+        else:
+            if n<10:
+                return 1
         if u==9:
             temp=self.digitCounts(k,d)
             return temp*10+d+1 if k!=0 else (temp-1)*10+d+1
@@ -26,4 +30,4 @@ class Solution:
 #Test Cases:
     
 sol=Solution()
-print(sol.digitCounts(0,123))
+print(sol.digitCounts(2,19))

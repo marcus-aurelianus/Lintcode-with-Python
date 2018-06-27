@@ -1,5 +1,5 @@
 class Solution:
-    def diceSum(self,n):
+    def dicesSum(self,n):
         base_case={0:1}
         for i in range(1,n+1):
             temp={}

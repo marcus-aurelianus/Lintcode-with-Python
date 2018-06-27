@@ -1,10 +1,14 @@
 class Solution:
-    def rotateString(self,str,offset):
-        pos=offset%(len(str))
-        return str[-pos:]+str[:-pos]
-
+    def rotateString(self,s,offset):#wrong q, string cannot do value assignment...
+        if len(s)>0:
+            offset=offset%(len(s))
+        temp=s[-offset:]+s[:-offset]
+        for i in range(len(temp)):
+            s[i]=temp[i]
 
 #Test Cases:
     
 sol=Solution()
-print(sol.rotateString("abcdefg",3))
+a="abcdefg"
+sol.rotateString(a,3)
+print(a)
