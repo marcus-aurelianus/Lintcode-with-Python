@@ -14,7 +14,6 @@ class Solution:
     can be easily deserialized by your own "deserialize" method later.
     """
     def serialize(self, root):
-        # write your code here
         if root == None:
             return "{}"
         queue = [root]
@@ -26,7 +25,6 @@ class Solution:
             if node != None:
                 queue.append(node.left)
                 queue.append(node.right)
-            
         queue = answer
         # construct string
         str = ""
@@ -69,5 +67,5 @@ class Solution:
     
 sol=Solution()
 
-tree=sol.deserialize("3,9,20,#,#,15,7")
+tree=sol.deserialize("{3,9,20,#,#,15,7}")
 print(sol.serialize(tree))
