@@ -4,9 +4,7 @@ class Interval:
         self.end=end
 class Solution:
     def insert(self,intervals,newInterval):
-        res=[]
-        pos=0
-        temp=[]
+        res,temp=[],[]
         for interval in intervals:
             if interval.end==newInterval.start:
                 temp.append(interval.start)
