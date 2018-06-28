@@ -23,6 +23,7 @@ class Solution:
                             temp1,temp2=temp2,[]
                             j=0
                     j=0
+                    temp1,temp2=[],[]
                 i+=1
         return res                   
 #Test Cases:  
