@@ -14,6 +14,8 @@ class Solution:
             that_guy=next_guy
             i+=1
 
+            
+# Test Case：
 sol=Solution()
 node3=ListNode(3)
 node2=ListNode(2,node3)
