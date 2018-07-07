@@ -23,9 +23,10 @@ class MyQueue:
     @return: An integer
     """
     def top(self):
-        while self.stk1!=[]:
-            ele=self.stk1.pop()
-            self.stk2.append(ele)
+        if self.stk2==[]:
+            while self.stk1!=[]:
+                ele=self.stk1.pop()
+                self.stk2.append(ele)
         return self.stk2[-1]
 
 
