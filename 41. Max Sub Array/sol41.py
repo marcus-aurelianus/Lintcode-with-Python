@@ -11,5 +11,5 @@ class Solution:
 
 #Test Case:
 sol=Solution()
-lst=[-2,2,-3,4,-1,2,1,-5,3]
+lst=[-50,-1,1,-2,-3,-100,-1,4,-50]
 print(sol.maxSubArray(lst))
