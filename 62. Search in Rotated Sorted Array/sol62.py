@@ -16,3 +16,6 @@ class Solution:
             else:
                 l = m + 1
         return -1
+#Test Case:
+sol=Solution()
+print(sol.search([1001,10001,10007,1,10,101,201],1001))
