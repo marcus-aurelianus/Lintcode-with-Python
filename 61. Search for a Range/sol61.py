@@ -28,4 +28,4 @@ class Solution:
 
 #Test Case:
 sol=Solution()
-print(sol.searchRange([5,7,7,8,8,10],5))
+print(sol.searchRange([1001,10001,10007,1,10,101,201],10001))
