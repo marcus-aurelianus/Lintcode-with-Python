@@ -7,9 +7,19 @@ class Solution:
     @return: nothing
     """
     def mergeSortedArray(self, A, m, B, n):
-        for i in range(n):
-            A[i+m] = B[i]
-        A.sort()
+        i,j,pos=m-1,n-1,m+n-1
+        while (i>=0 and j>=0):
+            if i>=0 and A[i]>B[j]:
+                A[pos],A[i]=A[i],A[pos]
+                i-=1
+            else:
+                A[pos]=B[j]
+                j-=1
+            pos-=1
+        while j>=0:
+            A[pos]=B[j]
+            pos-=1
+            j-=1
 
 #Test Case:
 sol=Solution()
