@@ -11,6 +11,8 @@ class Solution:
     @return: Preorder in ArrayList which contains node values.
     """
     def preorderTraversal(self, root):
+        if root==None:
+            return []
         if root.left==None:
             if root.right==None:
                 return [root.val]
