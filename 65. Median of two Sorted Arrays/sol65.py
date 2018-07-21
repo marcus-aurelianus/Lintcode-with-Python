@@ -13,6 +13,7 @@ class Solution:
             larger=self.findMedian(A,B,n//2+1)
             return (smaller+larger)/2
     def findMedian(self,A,B,pos):
+        print(A,B)
         if len(A)==0:
             return B[pos-1]
         if len(B)==0:
@@ -30,5 +31,5 @@ class Solution:
 #Test Case:
 sol=Solution()
 A=[1,2,3,4,5,6]
-B=[2,3,4,5]
+B=[2,3,4,5,6]
 print(sol.findMedianSortedArrays(A,B))
