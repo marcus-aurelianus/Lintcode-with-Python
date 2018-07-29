@@ -26,6 +26,7 @@ class Solution:
                 node=stk[-1].right
             else:
                 node=None
+            #print(list(map(lambda x:x.val,stk)),node)
         return result
 node1=TreeNode(1)
 node2=TreeNode(2)
