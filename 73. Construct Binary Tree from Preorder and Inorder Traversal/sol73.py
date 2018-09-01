@@ -13,12 +13,13 @@ class Solution:
     def buildTree(self, preorder, inorder):
         if not inorder or not preorder:
             return None
-        root_val=inorder[0]
+        root_val=preorder[0]
         root=TreeNode(root_val)
         pos=inorder.index(root_val)
-        print(preorder[0:pos+1],preorder[pos+1:])
+        print(preorder, inorder)
         root.left=self.buildTree(preorder[1:pos+1],inorder[:pos])
-        root.right=self.buildTree( preorder[pos+1:],inorder[pos+1:])
+        root.right=self.buildTree(preorder[pos+1:],inorder[pos+1:])
         return root
         
 print(Solution().buildTree([2,1,3],[1,2,3]))
+
