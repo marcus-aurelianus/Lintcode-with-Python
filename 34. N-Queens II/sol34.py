@@ -7,7 +7,7 @@ class Solution:
                     return False
             return True
         i=0
-        while (i<n):
+        for i in range(n):
             next_sol=[]    
             for ans in sol:
                 for j in range(n):
@@ -17,7 +17,6 @@ class Solution:
                         if temp not in next_sol:
                             next_sol.append(temp)
             sol=next_sol
-            i+=1
         return  len(sol)
 sol=Solution()
-print(sol.totalNQueens(1))
+print(sol.totalNQueens(7))

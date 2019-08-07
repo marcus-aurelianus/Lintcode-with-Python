@@ -10,8 +10,9 @@ class Solution:
         for i in range(1,n):
             min_local=nums[i]+min(0,min_local)
             local=min(local,min_local)
+            print(local,min_local)
         return local
 #Test Case:
 sol=Solution()
-lst=[1,-1,-2,1]
+lst=[1,-1,-2,1,12,-2,-6]
 print(sol.minSubArray(lst))

@@ -7,16 +7,18 @@ class Solution:
         that_guy,next_guy=head,[]
         guys=[]
         i=1
-        while that_guy!=None:
-            next_guy=that_guy.next
-            guys.append(that_guy)
-            if m<i<=n:
-                that_guy.next=guys[i-2]
-            if i==n:
-                guys[m-1].next=next_guy
-                guys[m-2].next=guys[n-1]
-            that_guy=next_guy
-            i+=1
+        if m!=n:
+            while that_guy!=None:
+                next_guy=that_guy.next
+                guys.append(that_guy)
+                if m<i<=n:
+                    that_guy.next=guys[i-2]
+                if i==n:
+                    guys[m-1].next=next_guy
+                    guys[m-2].next=guys[n-1]
+                that_guy=next_guy
+                i+=1
+        return guys[0]
 
 sol=Solution()
 # node5=ListNode(5)
@@ -49,6 +51,11 @@ node5=ListNode(3904,node6)
 node4=ListNode(7595,node5)
 node3=ListNode(2881,node4)
 node2=ListNode(3760,node3)
+kappa=node2
+while(kappa!=None):
+    print(kappa.val)
+    kappa=kappa.next
+print("###############")
 sol.reverseBetween(node2,2,7)
 kappa=node2
 while(kappa!=None):

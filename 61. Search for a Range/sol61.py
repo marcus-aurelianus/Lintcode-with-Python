@@ -16,16 +16,20 @@ class Solution:
                 end1=mid1
             else:
                 start1=mid1
+        print(start1,end1,start2,end2)
         if [start1,end1]==[start2,end2]:
             if A[end1]==target:
                 return [end1,end1]
             else:
-                return [start1,start1]
-        elif A[end1]==target:   
-            return [end1,start2]
+                return [-1,-1]
+        elif A[end1]==target:
+            if A[end2]==target:
+                return [end1,end2]
+            else:
+                return [end1,start2]
         else:
             return [-1,-1]
 
 #Test Case:
 sol=Solution()
-print(sol.searchRange([1001,10001,10007,1,10,101,201],10001))
+print(sol.searchRange([5,5,5,5,5,5,5,5,5,5],5))

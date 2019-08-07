@@ -25,5 +25,5 @@ class Solution:
 #Test Case:
 sol=Solution()
 lst=[4, 0, 7, 1, 2, 3, 8, 9]
-lst1=[1,3,2]
+lst1=[1,1]
 print(sol.previousPermutation(lst1))

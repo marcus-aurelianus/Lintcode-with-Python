@@ -1,21 +1,21 @@
 class Solution:
-    # @param num :  a list of integer
+    # @param nums :  a list of integer
     # @return : a list of integer
-    def previousPermuation(self, num):
+    def previousPermuation(self, nums):
         # write your code here
-        for i in range(len(num)-2, -1, -1):
-            if num[i] > num[i+1]:
+        for i in range(len(nums)-2, -1, -1):
+            if nums[i] > nums[i+1]:
                 break
         else:
-            num.reverse()
-            return num
-        for j in range(len(num)-1, i, -1):
-            if num[j] < num[i]:
-                num[i], num[j] = num[j], num[i]
+            nums.reverse()
+            return nums
+        for j in range(len(nums)-1, i, -1):
+            if nums[j] < nums[i]:
+                nums[i], nums[j] = nums[j], nums[i]
                 break
-        for j in range(0, (len(num) - i)//2):
-            num[i+j+1], num[len(num)-j-1] = num[len(num)-j-1], num[i+j+1]
-        return num
+        for j in range(0, (len(nums) - i)//2):
+            nums[i+j+1], nums[len(nums)-j-1] = nums[len(nums)-j-1], nums[i+j+1]
+        return nums
 
 
 #Test Case:

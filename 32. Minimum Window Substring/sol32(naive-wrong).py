@@ -16,7 +16,7 @@ class Solution:
 
 
 #Test Case
-source='AD0BEC0DEBANC'
-target="ABC"
+source='absdfaabab'
+target="adb"
 sol=Solution()
 print(sol.minWindow(source,target))
