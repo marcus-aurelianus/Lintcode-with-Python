@@ -24,15 +24,9 @@ class Solution:
                 nums[left], nums[right] = nums[right], nums[left]
                 left += 1
                 right -= 1
-        print(start+k-1,k,left,right)
         if start + k - 1 <= right:
             return self.partition(nums, start, right, k)
         if start + k - 1 >= left:
             return self.partition(nums, left, end, k - (left - start))
             
         return nums[right + 1]
-    
-sol=Solution()
-lst=[11,2,3,5,7,8,34,232,6676,32,464,655,43,6,31,214]
-print(sol.median(lst))
-print(lst)
